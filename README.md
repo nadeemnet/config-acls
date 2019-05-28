@@ -1,5 +1,5 @@
 # config-acls
-This Ansible playbook configures/changes ACLs on Cisco nx-os switches. The idea is that all acls modifications should be done via version controloed repository. The ACL names are standardized using vlan-id. Pushing ACL changes through Ansible playbook will minimize human error and version control will provide a clear understanding of when a particular change was made. The playbook is idempotent which means that ACLs will only be pushed if there is a change.
+This Ansible playbook configures/changes ACLs on Cisco nx-os switches. The idea is that all acls modifications should be done via version controlled repository. The ACL names are standardized using vlan-id. Pushing ACL changes through Ansible playbook will minimize human error and version control will provide a clear understanding of when a particular change was made. The playbook is idempotent which means that ACLs will only be pushed if there is a change.
 
 The respository has two files. 
 
