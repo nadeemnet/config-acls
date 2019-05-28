@@ -1,0 +1,56 @@
+---
+
+- name: This playbook configures acls on Nexus switches
+  hosts: all
+  vars_files: 
+    - acl_config.yaml
+  
+  tasks:
+   - name: Checking VLAN 642 ACLs
+     nxos_config:
+         before: "{{ VLAN_642_ACL_IN.before }}"
+         parents: "{{ VLAN_642_ACL_IN.parents }}"
+         lines: "{{ VLAN_642_ACL_IN.lines }}"
+         match: exact
+
+   - name: Checking VLAN 643 ACLs
+     nxos_config:
+         before: "{{ VLAN_643_ACL_IN.before }}"
+         parents: "{{ VLAN_643_ACL_IN.parents }}"
+         lines: "{{ VLAN_643_ACL_IN.lines }}"
+         match: exact
+
+   - name: Checking VLAN 644 ACLs
+     nxos_config:
+         before: "{{ VLAN_644_ACL_IN.before }}"
+         parents: "{{ VLAN_644_ACL_IN.parents }}"
+         lines: "{{ VLAN_644_ACL_IN.lines }}"
+         match: exact
+
+   - name: Checking VLAN 645 ACLs
+     nxos_config:
+         before: "{{ VLAN_645_ACL_IN.before }}"
+         parents: "{{ VLAN_645_ACL_IN.parents }}"
+         lines: "{{ VLAN_645_ACL_IN.lines }}"
+         match: exact
+
+   - name: Checking VLAN 646 ACLs
+     nxos_config:
+         before: "{{ VLAN_646_ACL_IN.before }}"
+         parents: "{{ VLAN_646_ACL_IN.parents }}"
+         lines: "{{ VLAN_646_ACL_IN.lines }}"
+         match: exact
+
+   - name: Checking VLAN 647 ACLs
+     nxos_config:
+         before: "{{ VLAN_647_ACL_IN.before }}"
+         parents: "{{ VLAN_647_ACL_IN.parents }}"
+         lines: "{{ VLAN_647_ACL_IN.lines }}"
+         match: exact   
+
+   - name: Checking VLAN 648 ACLs
+     nxos_config:
+         before: "{{ VLAN_648_ACL_IN.before }}"
+         parents: "{{ VLAN_648_ACL_IN.parents }}"
+         lines: "{{ VLAN_648_ACL_IN.lines }}"
+         match: exact

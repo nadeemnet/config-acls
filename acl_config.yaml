@@ -1,0 +1,69 @@
+---
+
+VLAN_642_ACL_IN:
+  lines:
+    - statistics per-entry
+    - 10 permit icmp 10.10.192.0/24 any 
+    - 20 permit ip 10.10.192.0/24 224.0.0.0/4 
+    - 500 deny ip any any 
+  before: no ip access-list VLAN_642_ACL_IN
+  parents: ip access-list VLAN_642_ACL_IN 
+
+VLAN_643_ACL_IN:
+  lines:
+    - statistics per-entry
+    - 10 permit icmp 10.10.193.0/24 any 
+    - 20 permit ip 10.10.193.0/24 224.0.0.0/4 
+    - 500 deny ip any any 
+  before: no ip access-list VLAN_643_ACL_IN
+  parents: ip access-list VLAN_643_ACL_IN     
+
+VLAN_644_ACL_IN:
+  lines:
+    - statistics per-entry
+    - 10 permit icmp 10.10.194.0/24 any 
+    - 20 permit ip 10.10.194.0/24 224.0.0.0/4 
+    - 500 deny ip any any
+  before: no ip access-list VLAN_644_ACL_IN
+  parents: ip access-list VLAN_644_ACL_IN  
+
+VLAN_645_ACL_IN:
+  lines:
+    - statistics per-entry
+    - 10 permit icmp 10.10.195.0/24 any 
+    - 20 permit ip 10.10.195.0/24 224.0.0.0/4 
+    - 500 deny ip any any 
+  before: no ip access-list VLAN_645_ACL_IN
+  parents: ip access-list VLAN_645_ACL_IN 
+
+VLAN_646_ACL_IN:
+  lines:
+    - statistics per-entry
+    - 10 permit icmp 10.10.196.0/24 any 
+    - 20 permit ip 10.10.196.0/24 224.0.0.0/4 
+    - 30 deny ip any any 
+  before: no ip access-list VLAN_646_ACL_IN
+  parents: ip access-list VLAN_646_ACL_IN 
+
+VLAN_647_ACL_IN:
+  lines:
+    - statistics per-entry
+    - 10 permit icmp 10.10.197.0/24 any 
+    - 20 permit ip 10.10.197.0/24 224.0.0.0/4 
+    - 500 deny ip any any 
+  before: no ip access-list VLAN_647_ACL_IN
+  parents: ip access-list VLAN_647_ACL_IN
+
+VLAN_648_ACL_IN:
+  lines:
+    - statistics per-entry
+    - 10 permit icmp 10.10.198.0/23 any 
+    - 20 permit ip 10.10.198.0/23 224.0.0.0/4 
+    - 30 permit udp 10.10.198.0/23 10.124.188.54/32 eq domain 
+    - 40 permit udp 10.10.198.0/23 10.124.188.55/32 eq domain 
+    - 50 deny ip 10.10.198.0/23 10.105.0.0/16 
+    - 60 deny ip 10.10.198.0/23 10.124.0.0/16 
+    - 70 deny ip 10.10.198.0/23 10.0.0.0/8 
+    - 80 permit ip any any 
+  before: no ip access-list VLAN_648_ACL_IN
+  parents: ip access-list VLAN_648_ACL_IN    
